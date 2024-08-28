@@ -1,0 +1,20 @@
+.user-card-container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: aqua;
+    width: 80%;
+    border: aquamarine 2px solid;
+    padding: 20px 40px;
+    border-radius: 30px;
+}
+.user-card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: aquamarine 2px solid;
+}

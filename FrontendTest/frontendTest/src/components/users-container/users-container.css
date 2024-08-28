@@ -1,0 +1,20 @@
+.users-tittle {
+    font-size: 3rem;
+    text-align: center;
+    color: aqua;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+}
+
+.loading-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 5rem;
+    background-color: black;
+    color: aqua;
+}
