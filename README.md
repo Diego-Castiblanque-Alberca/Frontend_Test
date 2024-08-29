@@ -1,8 +1,3 @@
-
-Aquí tienes el contenido del archivo README.md en el lenguaje de Markdown que utiliza GitHub:
-
-markdown
-Copy code
 # Manual for Deploying the Application in a Local Environment
 
 Follow these steps to set up the application on your local environment:
