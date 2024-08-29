@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
+import { forwardRef } from 'react';
 import './user-card.css';
 
-export function UserCard({ user }) {
+const UserCard = forwardRef(function UserCard({ user }, ref) {
     return (
-        <div className="user-card-container">
+        <div ref={ref} className="user-card-container">
             <img className='user-card-img' src={user.avatar} alt="avatar.jpg" />
             <p className='user-card-name'>{user.name}</p>
             <p className='user-card-email'>{user.email}</p>
             <p className='user-card-phone'>{user.phone}</p>
         </div>
     );
-}
+});
 
 UserCard.propTypes = {
     user: PropTypes.shape({
@@ -21,3 +22,5 @@ UserCard.propTypes = {
         avatar: PropTypes.string.isRequired,
     }).isRequired,
 };
+
+export { UserCard };

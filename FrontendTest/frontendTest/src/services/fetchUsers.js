@@ -9,11 +9,10 @@ export async function fetchUsers(size = 100) {
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.statusText}`);
         }
-        const DATA = await response.json();
-        return processData(DATA);
+        const data = await response.json();
+        return processData(data);
     } catch (error) {
         console.error("Fetching users failed:", error);
-        throw error; // Rethrow the error to be caught by the caller
     }
 }
 function processData(users) {

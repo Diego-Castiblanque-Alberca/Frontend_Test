@@ -3,6 +3,7 @@ import { ListUsers } from "../list-users-cards/list-users-cards.jsx";
 import { useState, useEffect } from 'react';
 import './users-container.css';
 
+
 export function UsersContainer() {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -22,20 +23,15 @@ export function UsersContainer() {
         loadUsers();
     }, []);
 
-    if (loading) {
-        return <div className="loading-frame">Loading...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
-
     return (
+        loading && <div className="loading-frame">Loading...</div> 
+        ||
+        error && console.log('Error: ', error) 
+        ||
         <div className='users-container'>
             <h1 className="users-tittle">Users List</h1>
             <ListUsers users={users} />
-        </div>
-    );
+        </div>)
 }
 
 export default UsersContainer;
