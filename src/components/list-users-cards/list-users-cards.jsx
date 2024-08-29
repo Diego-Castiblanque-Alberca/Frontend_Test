@@ -77,9 +77,6 @@ export function ListUsers({ users }) {
             loadUsers();
             setNearToEnd(false);
         }
-        return () => {
-            setLoading(false);
-        };
     }, [error, nearToEnd, users, changeRef]);
     
     // Display the list of user cards, loading message, or error message
